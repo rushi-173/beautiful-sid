@@ -8,7 +8,7 @@ const Counter: React.FC = () => {
   useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
-        setCounter((prevCounter) => prevCounter + 1);
+        setCounter((prevCounter: number) => prevCounter + 1);
       }, 1000);
     }
 
@@ -20,7 +20,7 @@ const Counter: React.FC = () => {
   }, [isRunning]);
 
   const handleStartPauseClick = () => {
-    setIsRunning((prevIsRunning) => !prevIsRunning);
+    setIsRunning((prevIsRunning: boolean) => !prevIsRunning);
   };
 
   const handleResetClick = () => {
